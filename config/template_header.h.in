@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+const char* project_name = "@PROJECT_NAME@";
+const char* project_version = "@PROJECT_VERSION@";
+
+#define major_version  @PROJECT_VERSION_MAJOR@
+#define minor_version  @PROJECT_VERSION_MINOR@
+#define patch_version  @PROJECT_VERSION_PATCH@
+

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(c_project C CXX)
+project(c_project VERSION 1.0.0 LANGUAGES C)
 
 #compiler settings must be set for any project
 set (CMAKE_C_STANDARD 11)
@@ -11,6 +11,7 @@ set(LIBRARY_TARGET LIB)
 
 add_subdirectory(sum)
 add_subdirectory(arr)
+add_subdirectory(config)
 
 option(EXCLUDE_SRC "exclude src file" ON)   #option to set boolean values 
 if (EXCLUDE_SRC)
