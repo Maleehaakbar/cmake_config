@@ -6,6 +6,11 @@ project(c_project VERSION 1.0.0 LANGUAGES C)
 set (CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS  ON)
+
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")  #set the absolute path of cmake directory
+include(addsubmodule)      #include cmake module file
+add_submodule_git("external")#call function
+
 set(LIBRARY_TARGET LIB)
 
 
