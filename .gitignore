@@ -56,3 +56,8 @@ dkms.conf
 
 #bild folder
 build/
+
+# Ignore Doxygen output
+/docs/html/
+/docs/latex/
+
