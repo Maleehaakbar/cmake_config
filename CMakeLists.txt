@@ -13,6 +13,7 @@ add_submodule_git("external")#call function
 include(doxygendocs)
 
 set(LIBRARY_TARGET LIB)
+set(FINAL_TARGET final)
 
 include(FetchContent)
 FetchContent_Declare(
@@ -25,6 +26,10 @@ FetchContent_MakeAvailable(libzip)
 
 get_property(all_targets GLOBAL PROPERTY TARGETS)
 message(STATUS "Targets after FetchContent: ${all_targets}")
+
+option(ENABLE_WARNINGS_AS_ERRORS "Enable warnings as errors" OFF)
+include(compilerwarnings)
+
 
 add_subdirectory(sum)
 add_subdirectory(arr)
